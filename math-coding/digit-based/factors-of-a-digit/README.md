@@ -1,22 +1,77 @@
-Write a program to print all the factors of a given number N. A factor is a number that divides N without leaving a remainder.
-Input Format
+# 📋 Factors of a Number
 
-A single integer N
-Constraints
+> Print all factors of N in ascending order.
 
-1 <= N <= 10^4
-Output Format
+---
 
-Print all the factors of N in ascending order, separated by a space.
-Sample Input 0
+## 🧩 Problem Statement
 
-12
-Sample Output 0
+Given a number `N`, print **all factors** (divisors) of `N` in ascending order, separated by spaces.
 
-1 2 3 4 6 12
-Sample Input 1
+A factor `i` satisfies: `N % i == 0`
 
-7
-Sample Output 1
+---
 
-1 7
+## 📥 Input Format
+
+A single integer `N`.
+
+## 📤 Output Format
+
+Print all factors of `N` in ascending order, separated by a space.
+
+---
+
+## 🔒 Constraints
+
+| Variable | Range        |
+|----------|--------------|
+| `N`      | 1 ≤ N ≤ 10^4 |
+
+---
+
+## 💡 Examples
+
+### Example 1
+```
+Input:  12
+Output: 1 2 3 4 6 12
+```
+
+### Example 2
+```
+Input:  7
+Output: 1 7
+```
+
+---
+
+## 🧠 Approach
+
+- Iterate `i` from `1` to `N`
+- If `N % i == 0`, print `i` followed by a space
+
+**Time Complexity:** O(N)  
+**Space Complexity:** O(1)
+
+> 💡 **Optimization tip:** Iterate up to `√N`, and for each factor `i`, also print `N/i` to achieve O(√N).
+
+---
+
+## ✅ Solution
+
+```java
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+```

@@ -1,30 +1,92 @@
-Given an integer N, write a program to find the maximum and minimum digit in the absolute value of N.
+# 📈📉 Maximum and Minimum Digit
 
-Input Format
+> Find the largest and smallest digit in any integer.
 
-A single integer N
-Constraints
+---
 
--10^9 <= N <= 10^9
-Output Format
+## 🧩 Problem Statement
+
+Given an integer `N`, find the **maximum** and **minimum** digit in the absolute value of `N`.
+
+---
+
+## 📥 Input Format
+
+A single integer `N`.
+
+## 📤 Output Format
 
 Print two space-separated integers:
+```
 max_digit min_digit
-Sample Input 0
+```
 
-12345
-Sample Output 0
+---
 
-5 1
-Sample Input 1
+## 🔒 Constraints
 
--907
-Sample Output 1
+| Variable | Range              |
+|----------|--------------------|
+| `N`      | -10^9 ≤ N ≤ 10^9  |
 
-9 0
-Sample Input 2
+---
 
-4873
-Sample Output 2
+## 💡 Examples
 
-8 3
+### Example 1
+```
+Input:  12345
+Output: 5 1
+```
+> Digits: {1,2,3,4,5} → Max = **5**, Min = **1**
+
+### Example 2
+```
+Input:  -907
+Output: 9 0
+```
+> |−907| = 907 → Digits: {9,0,7} → Max = **9**, Min = **0**
+
+### Example 3
+```
+Input:  4873
+Output: 8 3
+```
+
+---
+
+## 🧠 Approach
+
+- Convert to absolute value if negative
+- Special case: if `N == 0`, both max and min are 0
+- Initialize `max = -1`, `min = 9`
+- Extract digits one by one with `% 10` and update max/min
+- Divide by 10 to strip last digit
+
+**Time Complexity:** O(log₁₀ N)  
+**Space Complexity:** O(1)
+
+---
+
+## ✅ Solution
+
+```java
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if (num < 0) num = -num;
+        int max = -1, min = 9;
+        if (num == 0) { min = 0; max = 0; }
+        while (num != 0) {
+            int digit = num % 10;
+            if (digit > max) max = digit;
+            if (digit < min) min = digit;
+            num = num / 10;
+        }
+        System.out.print(max + " " + min);
+    }
+}
+```

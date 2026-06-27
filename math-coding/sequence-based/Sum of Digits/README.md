@@ -1,22 +1,80 @@
-Given an integer N (can be positive, negative, or zero), write a program to calculate the sum of the digits of the absolute value of N.
-Input Format
+# ➕ Sum of Digits
 
-A single integer N
-Constraints
+> Add up every individual digit of a number, regardless of sign.
 
--10^9 <= N <= 10^9
-Output Format
+---
 
-Print the sum of digits of the absolute value of N.
-Sample Input 0
+## 🧩 Problem Statement
 
-12345
-Sample Output 0
+Given an integer `N` (positive, negative, or zero), compute the **sum of all digits** in its absolute value.
 
-15
-Sample Input 1
+---
 
--407
-Sample Output 1
+## 📥 Input Format
 
-11
+A single integer `N`.
+
+## 📤 Output Format
+
+Print the digit sum of `|N|`.
+
+---
+
+## 🔒 Constraints
+
+| Variable | Range              |
+|----------|--------------------|
+| `N`      | -10^9 ≤ N ≤ 10^9  |
+
+---
+
+## 💡 Examples
+
+### Example 1
+```
+Input:  12345
+Output: 15
+```
+> 1 + 2 + 3 + 4 + 5 = **15**
+
+### Example 2
+```
+Input:  -407
+Output: 11
+```
+> |−407| = 407 → 4 + 0 + 7 = **11**
+
+---
+
+## 🧠 Approach
+
+- If `N < 0`, negate it: `N = N * -1`
+- Extract digits with `digit = N % 10`, add to `sum`
+- Shrink N with `N = N / 10`
+- Repeat until `N == 0`
+
+**Time Complexity:** O(log₁₀ N)  
+**Space Complexity:** O(1)
+
+---
+
+## ✅ Solution
+
+```java
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int sum = 0;
+        if (num < 0) num = num * -1;
+        while (num != 0) {
+            int digit = num % 10;
+            sum = sum + digit;
+            num = num / 10;
+        }
+        System.out.print(sum);
+    }
+}
+```
