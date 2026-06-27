@@ -1,30 +1,101 @@
-An extra day is added to the calendar almost every four years as February 29, and the day is called a leap day. It corrects the calendar for the fact that our planet takes approximately 365.25 days to orbit the sun. A leap year contains a leap day.
-In the Gregorian calendar, three conditions are used to identify leap years:
-The year can be evenly divided by 4, is a leap year, unless:
-The year can be evenly divided by 100, it is NOT a leap year, unless:
-The year is also evenly divisible by 400. Then it is a leap year.
-This means that in the Gregorian calendar, the years 2000 and 2400 are leap years, while 1800, 1900, 2100, 2200, 2300 and 2500 are NOT leap years. Source
-Task
+# 📅 Leap Year Checker
+
+> Determine whether a given year is a leap year using the Gregorian calendar rules.
+
+---
+
+## 🧩 Problem Statement
+
+In the Gregorian calendar, a **leap year** is determined by three rules:
+
+1. The year is **evenly divisible by 4** → leap year, **unless**:
+2. The year is **evenly divisible by 100** → NOT a leap year, **unless**:
+3. The year is **also evenly divisible by 400** → it IS a leap year.
+
+Classic examples: **2000** and **2400** are leap years. **1800**, **1900**, **2100** are NOT.
+
 Given a year, determine whether it is a leap year.
-Input Format
 
-Read , the year to test.
-Constraints
+---
 
-1 <= year <= 10000
-Output Format
+## 📥 Input Format
 
-Print Leap Year if the year is a leap year
-Otherwise, print Not a Leap Year
-Sample Input 0
+A single integer `year`.
 
-2020
-Sample Output 0
+## 📤 Output Format
 
-Leap Year
-Sample Input 1
+```
+Leap Year      ← if year is a leap year
+Not a Leap Year ← otherwise
+```
 
-1900
-Sample Output 1
+---
 
-Not a Leap Year
+## 🔒 Constraints
+
+| Variable | Range |
+|----------|-------|
+| `year` | 1 ≤ year ≤ 10000 |
+
+---
+
+## 💡 Examples
+
+### Example 1
+```
+Input:  2020
+Output: Leap Year
+```
+> 2020 % 4 == 0 and 2020 % 100 ≠ 0 → Leap Year ✅
+
+### Example 2
+```
+Input:  1900
+Output: Not a Leap Year
+```
+> 1900 % 100 == 0 but 1900 % 400 ≠ 0 → Not a Leap Year ❌
+
+### Example 3
+```
+Input:  2000
+Output: Leap Year
+```
+> 2000 % 400 == 0 → Leap Year ✅
+
+---
+
+## 🧠 Approach
+
+Check divisibility in this priority order:
+1. If `year % 400 == 0` → Leap Year
+2. Else if `year % 100 == 0` → Not a Leap Year
+3. Else if `year % 4 == 0` → Leap Year
+4. Else → Not a Leap Year
+
+**Time Complexity:** O(1)  
+**Space Complexity:** O(1)
+
+---
+
+## ✅ Solution
+
+```java
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int year = sc.nextInt();
+
+        if (year % 400 == 0) {
+            System.out.print("Leap Year");
+        } else if (year % 100 == 0) {
+            System.out.print("Not a Leap Year");
+        } else if (year % 4 == 0) {
+            System.out.print("Leap Year");
+        } else {
+            System.out.print("Not a Leap Year");
+        }
+    }
+}
+```
