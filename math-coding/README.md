@@ -21,7 +21,10 @@ math-coding/
 │   ├── Leap-Year-Checker/
 │   ├── Student-Grade-Evaluator/
 │   ├── Triangle-Type-Detector/
-│   └── Character Classifier/
+│   ├── Character Classifier/
+│   ├── Armstrong-Number/
+│   ├── Harshad-number/
+│   └── Neon-number/
 │
 └── sequence-based/       ← Problems that extract and process individual digits
     ├── Digit Counter/
@@ -30,7 +33,8 @@ math-coding/
     ├── Sum-of-Odd-and-Even-Digits/
     ├── Palindrome Number/
     ├── Reverse-the-Number-(preserve sign)/
-    └── Sum-of-First-and-Last-Digit/
+    ├── Sum-of-First-and-Last-Digit/
+    └── Prime-Numbers-in-Range/
 ```
 
 ---
@@ -54,6 +58,9 @@ Problems that treat the number as a **whole unit** — using arithmetic, loops, 
 | 11 | [Student Grade Evaluator](./digit-based/Student-Grade-Evaluator/README.md) | Range-based Grading | 🟢 Easy |
 | 12 | [Triangle Type Detector](./digit-based/Triangle-Type-Detector/README.md) | Triangle Inequality | 🟡 Medium |
 | 13 | [Character Classifier](./digit-based/Character%20Classifier/README.md) | ASCII Range Checks | 🟢 Easy |
+| 14 | [Armstrong Number](./digit-based/Armstrong-Number/README.md) | Digit Power Sum | 🟡 Medium |
+| 15 | [Harshad Number](./digit-based/Harshad-number/README.md) | Digit Sum Divisibility | 🟢 Easy |
+| 16 | [Neon Number](./digit-based/Neon-number/README.md) | Square Digit Sum | 🟢 Easy |
 
 ---
 
@@ -70,6 +77,7 @@ Problems that **extract individual digits** by repeatedly using `% 10` and `/ 10
 | 5 | [Palindrome Number](./sequence-based/Palindrome%20Number/README.md) | Digit Reversal + Comparison | 🟡 Medium |
 | 6 | [Reverse the Number (Preserve Sign)](./sequence-based/Reverse-the-Number-(preserve%20sign)/README.md) | Digit Reversal | 🟢 Easy |
 | 7 | [Sum of First and Last Digit](./sequence-based/Sum-of-First-and-Last-Digit/README.md) | Digit Extraction | 🟢 Easy |
+| 8 | [Prime Numbers in Range](./sequence-based/Prime-Numbers-in-Range/README.md) | Trial Division + Range Loop | 🟡 Medium |
 
 ---
 
@@ -126,7 +134,7 @@ if (condition1) {
 
 | Total Problems | Digit-Based | Sequence-Based |
 |:--------------:|:-----------:|:--------------:|
-| **20**         | 13          | 7              |
+| **24**         | 16          | 8              |
 
 ---
 

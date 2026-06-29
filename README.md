@@ -23,8 +23,8 @@ Problems focused on mathematical logic, number theory, digit manipulation, and c
 
 | Sub-Category | Problems | Topics Covered |
 |---|---|---|
-| [Digit-Based](./math-coding/digit-based/) | 13 | Power, Factors, Primes, Factorial, Comparison, Leap Year, Grading, Triangle Classification, Character Classification |
-| [Sequence-Based](./math-coding/sequence-based/) | 7 | Digit Sum, Digit Count, Max/Min Digit, Odd/Even Digit Sum, Palindrome, Reverse, First & Last Digit |
+| [Digit-Based](./math-coding/digit-based/) | 16 | Power, Factors, Primes, Factorial, Comparison, Leap Year, Grading, Triangle, Characters, Armstrong, Harshad, Neon |
+| [Sequence-Based](./math-coding/sequence-based/) | 8 | Digit Sum, Digit Count, Max/Min Digit, Odd/Even Digit Sum, Palindrome, Reverse, First & Last Digit, Primes in Range |
 
 ---
 
@@ -46,6 +46,9 @@ Problems focused on mathematical logic, number theory, digit manipulation, and c
 | 11 | [Student Grade Evaluator](./math-coding/digit-based/Student-Grade-Evaluator/README.md) | 🟢 Easy |
 | 12 | [Triangle Type Detector](./math-coding/digit-based/Triangle-Type-Detector/README.md) | 🟡 Medium |
 | 13 | [Character Classifier](./math-coding/digit-based/Character%20Classifier/README.md) | 🟢 Easy |
+| 14 | [Armstrong Number](./math-coding/digit-based/Armstrong-Number/README.md) | 🟡 Medium |
+| 15 | [Harshad Number](./math-coding/digit-based/Harshad-number/README.md) | 🟢 Easy |
+| 16 | [Neon Number](./math-coding/digit-based/Neon-number/README.md) | 🟢 Easy |
 
 ### Sequence-Based
 | # | Problem | Difficulty |
@@ -57,6 +60,7 @@ Problems focused on mathematical logic, number theory, digit manipulation, and c
 | 5 | [Palindrome Number](./math-coding/sequence-based/Palindrome%20Number/README.md) | 🟡 Medium |
 | 6 | [Reverse the Number (Preserve Sign)](./math-coding/sequence-based/Reverse-the-Number-(preserve%20sign)/README.md) | 🟢 Easy |
 | 7 | [Sum of First and Last Digit](./math-coding/sequence-based/Sum-of-First-and-Last-Digit/README.md) | 🟢 Easy |
+| 8 | [Prime Numbers in Range](./math-coding/sequence-based/Prime-Numbers-in-Range/README.md) | 🟡 Medium |
 
 ---
 
@@ -64,9 +68,9 @@ Problems focused on mathematical logic, number theory, digit manipulation, and c
 
 | Category | Total | Solved | Remaining |
 |---|---|---|---|
-| Math Coding — Digit-Based | 13 | 13 | 0 |
-| Math Coding — Sequence-Based | 7 | 7 | 0 |
-| **Total** | **20** | **20** | **0** |
+| Math Coding — Digit-Based | 16 | 16 | 0 |
+| Math Coding — Sequence-Based | 8 | 8 | 0 |
+| **Total** | **24** | **24** | **0** |
 
 ---
 
@@ -83,13 +87,13 @@ Problems focused on mathematical logic, number theory, digit manipulation, and c
 
 ```bash
 # Navigate to the problem folder
-cd math-coding/digit-based/Prime-number
+cd math-coding/digit-based/Armstrong-Number
 
 # Compile
 javac Solution.java
 
 # Run
-echo "7" | java Solution
+echo "153" | java Solution
 ```
 
 ---
