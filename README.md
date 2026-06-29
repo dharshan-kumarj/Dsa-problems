@@ -23,7 +23,7 @@ Problems focused on mathematical logic, number theory, digit manipulation, and c
 
 | Sub-Category | Problems | Topics Covered |
 |---|---|---|
-| [Digit-Based](./math-coding/digit-based/) | 16 | Power, Factors, Primes, Factorial, Comparison, Leap Year, Grading, Triangle, Characters, Armstrong, Harshad, Neon |
+| [Digit-Based](./math-coding/digit-based/) | 20 | Power, Factors, Primes, Factorial, Comparison, Leap Year, Grading, Triangle, Characters, Armstrong, Harshad, Neon, Automorphic, Spy, GCD, LCM |
 | [Sequence-Based](./math-coding/sequence-based/) | 8 | Digit Sum, Digit Count, Max/Min Digit, Odd/Even Digit Sum, Palindrome, Reverse, First & Last Digit, Primes in Range |
 
 ---
@@ -49,6 +49,10 @@ Problems focused on mathematical logic, number theory, digit manipulation, and c
 | 14 | [Armstrong Number](./math-coding/digit-based/Armstrong-Number/README.md) | 🟡 Medium |
 | 15 | [Harshad Number](./math-coding/digit-based/Harshad-number/README.md) | 🟢 Easy |
 | 16 | [Neon Number](./math-coding/digit-based/Neon-number/README.md) | 🟢 Easy |
+| 17 | [Automorphic Number](./math-coding/digit-based/Automorphic%20Number/README.md) | 🟡 Medium |
+| 18 | [Spy Number Checker](./math-coding/digit-based/Spy%20Number%20Checker/README.md) | 🟢 Easy |
+| 19 | [Greatest Common Divisor](./math-coding/digit-based/Greatest%20Common%20Divisor/README.md) | 🟡 Medium |
+| 20 | [Least Common Multiple](./math-coding/digit-based/Least%20Common%20Multiple/README.md) | 🟡 Medium |
 
 ### Sequence-Based
 | # | Problem | Difficulty |
@@ -68,9 +72,9 @@ Problems focused on mathematical logic, number theory, digit manipulation, and c
 
 | Category | Total | Solved | Remaining |
 |---|---|---|---|
-| Math Coding — Digit-Based | 16 | 16 | 0 |
+| Math Coding — Digit-Based | 20 | 20 | 0 |
 | Math Coding — Sequence-Based | 8 | 8 | 0 |
-| **Total** | **24** | **24** | **0** |
+| **Total** | **28** | **28** | **0** |
 
 ---
 

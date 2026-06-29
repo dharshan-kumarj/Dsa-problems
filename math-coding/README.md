@@ -24,7 +24,11 @@ math-coding/
 │   ├── Character Classifier/
 │   ├── Armstrong-Number/
 │   ├── Harshad-number/
-│   └── Neon-number/
+│   ├── Neon-number/
+│   ├── Automorphic Number/
+│   ├── Spy Number Checker/
+│   ├── Greatest Common Divisor/
+│   └── Least Common Multiple/
 │
 └── sequence-based/       ← Problems that extract and process individual digits
     ├── Digit Counter/
@@ -61,6 +65,10 @@ Problems that treat the number as a **whole unit** — using arithmetic, loops, 
 | 14 | [Armstrong Number](./digit-based/Armstrong-Number/README.md) | Digit Power Sum | 🟡 Medium |
 | 15 | [Harshad Number](./digit-based/Harshad-number/README.md) | Digit Sum Divisibility | 🟢 Easy |
 | 16 | [Neon Number](./digit-based/Neon-number/README.md) | Square Digit Sum | 🟢 Easy |
+| 17 | [Automorphic Number](./digit-based/Automorphic%20Number/README.md) | Square Suffix Match | 🟡 Medium |
+| 18 | [Spy Number Checker](./digit-based/Spy%20Number%20Checker/README.md) | Digit Sum vs Product | 🟢 Easy |
+| 19 | [Greatest Common Divisor](./digit-based/Greatest%20Common%20Divisor/README.md) | Loop-based GCD | 🟡 Medium |
+| 20 | [Least Common Multiple](./digit-based/Least%20Common%20Multiple/README.md) | LCM = (a×b)/GCD | 🟡 Medium |
 
 ---
 
@@ -117,15 +125,15 @@ for (int i = 1; i <= expo; i++) {
 }
 ```
 
-### Conditional Classification Pattern
+### GCD → LCM Pattern
 ```java
-if (condition1) {
-    // handle case 1
-} else if (condition2) {
-    // handle case 2
-} else {
-    // default case
+// GCD via loop
+int gcd = 1;
+for (int i = 1; i < a; i++) {
+    if (a % i == 0 && b % i == 0) gcd = i;
 }
+// LCM formula
+int lcm = (a * b) / gcd;
 ```
 
 ---
@@ -134,7 +142,7 @@ if (condition1) {
 
 | Total Problems | Digit-Based | Sequence-Based |
 |:--------------:|:-----------:|:--------------:|
-| **24**         | 16          | 8              |
+| **28**         | 20          | 8              |
 
 ---
 
