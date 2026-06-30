@@ -11,7 +11,7 @@ dsa-problems/
 └── math-coding/               ← Mathematical & numerical problem solving
     ├── digit-based/           ← Problems using whole-number arithmetic & conditional logic
     ├── sequence-based/        ← Problems using digit-extraction techniques
-    └── pattern-based/         ← Problems printing 2D star patterns using nested loops
+    └── pattern-based/         ← Problems printing 2D star/number patterns using nested loops
 ```
 
 ---
@@ -26,7 +26,7 @@ Problems focused on mathematical logic, number theory, digit manipulation, condi
 |---|---|---|
 | [Digit-Based](./math-coding/digit-based/) | 20 | Power, Factors, Primes, Factorial, Comparison, Leap Year, Grading, Triangle, Characters, Armstrong, Harshad, Neon, Automorphic, Spy, GCD, LCM |
 | [Sequence-Based](./math-coding/sequence-based/) | 8 | Digit Sum, Digit Count, Max/Min Digit, Odd/Even Digit Sum, Palindrome, Reverse, First & Last Digit, Primes in Range |
-| [Pattern-Based](./math-coding/pattern-based/) | 6 | Square, Rectangle, Staircase, Descending Steps, Diagonal, Hollow Frame |
+| [Pattern-Based](./math-coding/pattern-based/) | 10 | Square, Rectangle, Staircase, Descending Steps, Diagonal, Hollow Frame, Star Pyramid, Diamond, Number Pyramid, Symmetric Pyramid |
 
 ---
 
@@ -77,6 +77,10 @@ Problems focused on mathematical logic, number theory, digit manipulation, condi
 | 4 | [Descending Star Steps](./math-coding/pattern-based/Descending-Star-Steps/README.md) | 🟢 Easy |
 | 5 | [Diagonal Stars](./math-coding/pattern-based/Diagonal%20Stars/README.md) | 🟡 Medium |
 | 6 | [Star Box Frame](./math-coding/pattern-based/Star%20Box%20Frame/README.md) | 🟡 Medium |
+| 7 | [Star Pyramid](./math-coding/pattern-based/Star%20Pyramid/README.md) | 🟡 Medium |
+| 8 | [Diamond Star Pattern](./math-coding/pattern-based/Diamond%20Star%20Pattern/README.md) | 🟡 Medium |
+| 9 | [Number Pyramid](./math-coding/pattern-based/Number%20Pyramid/README.md) | 🟡 Medium |
+| 10 | [Symmetric Number Pyramid](./math-coding/pattern-based/Symmetric%20Number%20Pyramid/README.md) | 🔴 Hard |
 
 ---
 
@@ -86,8 +90,8 @@ Problems focused on mathematical logic, number theory, digit manipulation, condi
 |---|---|---|---|
 | Math Coding — Digit-Based | 20 | 20 | 0 |
 | Math Coding — Sequence-Based | 8 | 8 | 0 |
-| Math Coding — Pattern-Based | 6 | 6 | 0 |
-| **Total** | **34** | **34** | **0** |
+| Math Coding — Pattern-Based | 10 | 10 | 0 |
+| **Total** | **38** | **38** | **0** |
 
 ---
 
@@ -104,7 +108,7 @@ Problems focused on mathematical logic, number theory, digit manipulation, condi
 
 ```bash
 # Navigate to the problem folder
-cd math-coding/pattern-based/Square
+cd math-coding/pattern-based/Star Pyramid
 
 # Compile
 javac Solution.java

@@ -1,6 +1,6 @@
 # ⭐ Pattern-Based Problems
 
-A collection of star pattern problems that build mastery of **nested loops** and **2D grid printing** in Java.
+A collection of star and number pattern problems that build mastery of **nested loops** and **2D grid printing** in Java.
 
 ---
 
@@ -13,7 +13,11 @@ pattern-based/
 ├── Staircase of Stars/
 ├── Descending-Star-Steps/
 ├── Diagonal Stars/
-└── Star Box Frame/
+├── Star Box Frame/
+├── Star Pyramid/
+├── Diamond Star Pattern/
+├── Number Pyramid/
+└── Symmetric Number Pyramid/
 ```
 
 ---
@@ -28,6 +32,10 @@ pattern-based/
 | 4 | [Descending Star Steps](./Descending-Star-Steps/README.md) | Shrinking inverted triangle (↓) | 🟢 Easy |
 | 5 | [Diagonal Stars](./Diagonal%20Stars/README.md) | Main diagonal only | 🟡 Medium |
 | 6 | [Star Box Frame](./Star%20Box%20Frame/README.md) | Hollow bordered square | 🟡 Medium |
+| 7 | [Star Pyramid](./Star%20Pyramid/README.md) | Centred star pyramid | 🟡 Medium |
+| 8 | [Diamond Star Pattern](./Diamond%20Star%20Pattern/README.md) | Full diamond (pyramid + inverted) | 🟡 Medium |
+| 9 | [Number Pyramid](./Number%20Pyramid/README.md) | Centred number pyramid (1..i per row) | 🟡 Medium |
+| 10 | [Symmetric Number Pyramid](./Symmetric%20Number%20Pyramid/README.md) | Palindromic number pyramid (1..i..1) | 🔴 Hard |
 
 ---
 
@@ -44,9 +52,7 @@ pattern-based/
 ### Filled Pattern (Square / Rectangle)
 ```java
 for (int i = 0; i < rows; i++) {
-    for (int j = 0; j < cols; j++) {
-        System.out.print("*");
-    }
+    for (int j = 0; j < cols; j++) System.out.print("*");
     System.out.println();
 }
 ```
@@ -54,29 +60,31 @@ for (int i = 0; i < rows; i++) {
 ### Growing Triangle (Staircase)
 ```java
 for (int i = 0; i < n; i++) {
-    for (int j = 0; j <= i; j++) {   // inner limit grows with i
-        System.out.print("*");
-    }
+    for (int j = 0; j <= i; j++) System.out.print("*");
     System.out.println();
 }
 ```
 
-### Shrinking Triangle (Descending Steps)
+### Centred Pyramid (Space + Stars)
 ```java
-for (int i = n - 1; i >= 0; i--) {  // outer loop counts down
-    for (int j = 0; j <= i; j++) {
-        System.out.print("*");
-    }
+for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n - i - 1; j++) System.out.print(" ");  // spaces
+    for (int k = 0; k < 2 * i + 1; k++) System.out.print("*"); // stars
     System.out.println();
 }
 ```
 
-### Border Condition (Hollow Frame)
+### Diamond (Top + Bottom halves)
 ```java
-if (i == 0 || i == n - 1 || j == 0 || j == n - 1)
-    System.out.print("* ");
-else
-    System.out.print("  ");
+// Top half (i = 0 to n-1)
+// Bottom half (i = n-2 down to 0)
+// Same space/star formula, different loop direction
+```
+
+### Symmetric Number Row
+```java
+for (int j = 1; j <= i + 1; j++) System.out.print(j + " "); // ascending
+for (int j = i; j >= 1; j--)    System.out.print(j + " "); // descending
 ```
 
 ---
@@ -85,8 +93,8 @@ else
 
 | Total Problems | Pattern-Based |
 |:--------------:|:-------------:|
-| **6**          | 6             |
+| **10**         | 10            |
 
 ---
 
-> 💡 Every problem folder contains a `README.md` with the full problem statement, constraints, examples, visual output, approach, and the complete Java solution.
+> 💡 Every problem folder contains a `README.md` with the full problem statement, constraints, visual examples, approach, and the complete Java solution.

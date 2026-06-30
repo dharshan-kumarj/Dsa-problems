@@ -40,13 +40,17 @@ math-coding/
 │   ├── Sum-of-First-and-Last-Digit/
 │   └── Prime-Numbers-in-Range/
 │
-└── pattern-based/        ← Problems that print 2D star patterns using nested loops
+└── pattern-based/        ← Problems that print 2D patterns using nested loops
     ├── Square/
     ├── Rectangle/
     ├── Staircase of Stars/
     ├── Descending-Star-Steps/
     ├── Diagonal Stars/
-    └── Star Box Frame/
+    ├── Star Box Frame/
+    ├── Star Pyramid/
+    ├── Diamond Star Pattern/
+    ├── Number Pyramid/
+    └── Symmetric Number Pyramid/
 ```
 
 ---
@@ -99,7 +103,7 @@ Problems that **extract individual digits** by repeatedly using `% 10` and `/ 10
 
 ## ⭐ Pattern-Based Problems
 
-Problems that print **2D star patterns** using nested loops.
+Problems that print **2D star and number patterns** using nested loops.
 
 | # | Problem | Pattern Type | Difficulty |
 |---|---------|--------------|------------|
@@ -109,6 +113,10 @@ Problems that print **2D star patterns** using nested loops.
 | 4 | [Descending Star Steps](./pattern-based/Descending-Star-Steps/README.md) | Shrinking inverted triangle (↓) | 🟢 Easy |
 | 5 | [Diagonal Stars](./pattern-based/Diagonal%20Stars/README.md) | Main diagonal only | 🟡 Medium |
 | 6 | [Star Box Frame](./pattern-based/Star%20Box%20Frame/README.md) | Hollow bordered square | 🟡 Medium |
+| 7 | [Star Pyramid](./pattern-based/Star%20Pyramid/README.md) | Centred star pyramid | 🟡 Medium |
+| 8 | [Diamond Star Pattern](./pattern-based/Diamond%20Star%20Pattern/README.md) | Full diamond (pyramid + inverted) | 🟡 Medium |
+| 9 | [Number Pyramid](./pattern-based/Number%20Pyramid/README.md) | Centred number pyramid (1..i per row) | 🟡 Medium |
+| 10 | [Symmetric Number Pyramid](./pattern-based/Symmetric%20Number%20Pyramid/README.md) | Palindromic number pyramid (1..i..1) | 🔴 Hard |
 
 ---
 
@@ -125,18 +133,8 @@ Problems that print **2D star patterns** using nested loops.
 ### Digit Extraction Pattern
 ```java
 while (num != 0) {
-    int digit = num % 10;   // extract last digit
-    // ... process digit
-    num = num / 10;         // remove last digit
-}
-```
-
-### Divisibility / Factor Pattern
-```java
-for (int i = 1; i <= num; i++) {
-    if (num % i == 0) {
-        // i is a factor of num
-    }
+    int digit = num % 10;
+    num = num / 10;
 }
 ```
 
@@ -149,14 +147,21 @@ for (int i = 1; i < a; i++) {
 int lcm = (a * b) / gcd;
 ```
 
-### Nested Loop Pattern (2D Printing)
+### Centred Pyramid (Space + Stars)
 ```java
 for (int i = 0; i < n; i++) {
-    for (int j = 0; j < n; j++) {
-        System.out.print("*");
-    }
+    for (int j = 0; j < n - i - 1; j++) System.out.print(" ");
+    for (int k = 0; k < 2 * i + 1; k++) System.out.print("*");
     System.out.println();
 }
+```
+
+### Border Condition (Hollow Frame)
+```java
+if (i == 0 || i == n - 1 || j == 0 || j == n - 1)
+    System.out.print("* ");
+else
+    System.out.print("  ");
 ```
 
 ---
@@ -165,7 +170,7 @@ for (int i = 0; i < n; i++) {
 
 | Total Problems | Digit-Based | Sequence-Based | Pattern-Based |
 |:--------------:|:-----------:|:--------------:|:-------------:|
-| **34**         | 20          | 8              | 6             |
+| **38**         | 20          | 8              | 10            |
 
 ---
 
