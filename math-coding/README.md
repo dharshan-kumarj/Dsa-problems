@@ -1,6 +1,6 @@
 # 🧮 Math Coding — Problem Set
 
-A structured collection of mathematical programming problems solved in **Java**, organized into two categories based on their core technique.
+A structured collection of mathematical programming problems solved in **Java**, organized into three categories based on their core technique.
 
 ---
 
@@ -30,15 +30,23 @@ math-coding/
 │   ├── Greatest Common Divisor/
 │   └── Least Common Multiple/
 │
-└── sequence-based/       ← Problems that extract and process individual digits
-    ├── Digit Counter/
-    ├── Sum of Digits/
-    ├── Maximum-and-Minimum-Digit/
-    ├── Sum-of-Odd-and-Even-Digits/
-    ├── Palindrome Number/
-    ├── Reverse-the-Number-(preserve sign)/
-    ├── Sum-of-First-and-Last-Digit/
-    └── Prime-Numbers-in-Range/
+├── sequence-based/       ← Problems that extract and process individual digits
+│   ├── Digit Counter/
+│   ├── Sum of Digits/
+│   ├── Maximum-and-Minimum-Digit/
+│   ├── Sum-of-Odd-and-Even-Digits/
+│   ├── Palindrome Number/
+│   ├── Reverse-the-Number-(preserve sign)/
+│   ├── Sum-of-First-and-Last-Digit/
+│   └── Prime-Numbers-in-Range/
+│
+└── pattern-based/        ← Problems that print 2D star patterns using nested loops
+    ├── Square/
+    ├── Rectangle/
+    ├── Staircase of Stars/
+    ├── Descending-Star-Steps/
+    ├── Diagonal Stars/
+    └── Star Box Frame/
 ```
 
 ---
@@ -89,6 +97,21 @@ Problems that **extract individual digits** by repeatedly using `% 10` and `/ 10
 
 ---
 
+## ⭐ Pattern-Based Problems
+
+Problems that print **2D star patterns** using nested loops.
+
+| # | Problem | Pattern Type | Difficulty |
+|---|---------|--------------|------------|
+| 1 | [Square](./pattern-based/Square/README.md) | Filled n×n square | 🟢 Easy |
+| 2 | [Rectangle](./pattern-based/Rectangle/README.md) | Filled rows×cols rectangle | 🟢 Easy |
+| 3 | [Staircase of Stars](./pattern-based/Staircase%20of%20Stars/README.md) | Growing right triangle (↑) | 🟢 Easy |
+| 4 | [Descending Star Steps](./pattern-based/Descending-Star-Steps/README.md) | Shrinking inverted triangle (↓) | 🟢 Easy |
+| 5 | [Diagonal Stars](./pattern-based/Diagonal%20Stars/README.md) | Main diagonal only | 🟡 Medium |
+| 6 | [Star Box Frame](./pattern-based/Star%20Box%20Frame/README.md) | Hollow bordered square | 🟡 Medium |
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Language:** Java
@@ -117,32 +140,32 @@ for (int i = 1; i <= num; i++) {
 }
 ```
 
-### Power Without Math.pow()
-```java
-int result = 1;
-for (int i = 1; i <= expo; i++) {
-    result = result * base;
-}
-```
-
 ### GCD → LCM Pattern
 ```java
-// GCD via loop
 int gcd = 1;
 for (int i = 1; i < a; i++) {
     if (a % i == 0 && b % i == 0) gcd = i;
 }
-// LCM formula
 int lcm = (a * b) / gcd;
+```
+
+### Nested Loop Pattern (2D Printing)
+```java
+for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+        System.out.print("*");
+    }
+    System.out.println();
+}
 ```
 
 ---
 
 ## 📊 Problem Summary
 
-| Total Problems | Digit-Based | Sequence-Based |
-|:--------------:|:-----------:|:--------------:|
-| **28**         | 20          | 8              |
+| Total Problems | Digit-Based | Sequence-Based | Pattern-Based |
+|:--------------:|:-----------:|:--------------:|:-------------:|
+| **34**         | 20          | 8              | 6             |
 
 ---
 

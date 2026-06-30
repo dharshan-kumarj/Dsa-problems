@@ -10,7 +10,8 @@
 dsa-problems/
 └── math-coding/               ← Mathematical & numerical problem solving
     ├── digit-based/           ← Problems using whole-number arithmetic & conditional logic
-    └── sequence-based/        ← Problems using digit-extraction techniques
+    ├── sequence-based/        ← Problems using digit-extraction techniques
+    └── pattern-based/         ← Problems printing 2D star patterns using nested loops
 ```
 
 ---
@@ -19,12 +20,13 @@ dsa-problems/
 
 ### 🧮 [Math Coding](./math-coding/README.md)
 
-Problems focused on mathematical logic, number theory, digit manipulation, and conditional reasoning.
+Problems focused on mathematical logic, number theory, digit manipulation, conditional reasoning, and pattern printing.
 
 | Sub-Category | Problems | Topics Covered |
 |---|---|---|
 | [Digit-Based](./math-coding/digit-based/) | 20 | Power, Factors, Primes, Factorial, Comparison, Leap Year, Grading, Triangle, Characters, Armstrong, Harshad, Neon, Automorphic, Spy, GCD, LCM |
 | [Sequence-Based](./math-coding/sequence-based/) | 8 | Digit Sum, Digit Count, Max/Min Digit, Odd/Even Digit Sum, Palindrome, Reverse, First & Last Digit, Primes in Range |
+| [Pattern-Based](./math-coding/pattern-based/) | 6 | Square, Rectangle, Staircase, Descending Steps, Diagonal, Hollow Frame |
 
 ---
 
@@ -66,6 +68,16 @@ Problems focused on mathematical logic, number theory, digit manipulation, and c
 | 7 | [Sum of First and Last Digit](./math-coding/sequence-based/Sum-of-First-and-Last-Digit/README.md) | 🟢 Easy |
 | 8 | [Prime Numbers in Range](./math-coding/sequence-based/Prime-Numbers-in-Range/README.md) | 🟡 Medium |
 
+### Pattern-Based
+| # | Problem | Difficulty |
+|---|---------|------------|
+| 1 | [Square](./math-coding/pattern-based/Square/README.md) | 🟢 Easy |
+| 2 | [Rectangle](./math-coding/pattern-based/Rectangle/README.md) | 🟢 Easy |
+| 3 | [Staircase of Stars](./math-coding/pattern-based/Staircase%20of%20Stars/README.md) | 🟢 Easy |
+| 4 | [Descending Star Steps](./math-coding/pattern-based/Descending-Star-Steps/README.md) | 🟢 Easy |
+| 5 | [Diagonal Stars](./math-coding/pattern-based/Diagonal%20Stars/README.md) | 🟡 Medium |
+| 6 | [Star Box Frame](./math-coding/pattern-based/Star%20Box%20Frame/README.md) | 🟡 Medium |
+
 ---
 
 ## 📊 Progress Tracker
@@ -74,7 +86,8 @@ Problems focused on mathematical logic, number theory, digit manipulation, and c
 |---|---|---|---|
 | Math Coding — Digit-Based | 20 | 20 | 0 |
 | Math Coding — Sequence-Based | 8 | 8 | 0 |
-| **Total** | **28** | **28** | **0** |
+| Math Coding — Pattern-Based | 6 | 6 | 0 |
+| **Total** | **34** | **34** | **0** |
 
 ---
 
@@ -91,13 +104,13 @@ Problems focused on mathematical logic, number theory, digit manipulation, and c
 
 ```bash
 # Navigate to the problem folder
-cd math-coding/digit-based/Armstrong-Number
+cd math-coding/pattern-based/Square
 
 # Compile
 javac Solution.java
 
 # Run
-echo "153" | java Solution
+echo "4" | java Solution
 ```
 
 ---
