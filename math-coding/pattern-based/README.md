@@ -1,6 +1,6 @@
 # ⭐ Pattern-Based Problems
 
-A collection of star and number pattern problems that build mastery of **nested loops** and **2D grid printing** in Java.
+A collection of star, number, and mathematical sequence pattern problems that build mastery of **nested loops**, **2D grid printing**, and **iterative logic** in Java.
 
 ---
 
@@ -17,7 +17,11 @@ pattern-based/
 ├── Star Pyramid/
 ├── Diamond Star Pattern/
 ├── Number Pyramid/
-└── Symmetric Number Pyramid/
+├── Symmetric Number Pyramid/
+│
+│   ── Math Sequences ──
+├──  Fibonacci-Number/
+└── Swastika-Pattern/
 ```
 
 ---
@@ -36,6 +40,8 @@ pattern-based/
 | 8 | [Diamond Star Pattern](./Diamond%20Star%20Pattern/README.md) | Full diamond (pyramid + inverted) | 🟡 Medium |
 | 9 | [Number Pyramid](./Number%20Pyramid/README.md) | Centred number pyramid (1..i per row) | 🟡 Medium |
 | 10 | [Symmetric Number Pyramid](./Symmetric%20Number%20Pyramid/README.md) | Palindromic number pyramid (1..i..1) | 🔴 Hard |
+| 11 | [Fibonacci Number](./%20Fibonacci-Number/README.md) | Iterative Fibonacci F(n) | 🟢 Easy |
+| 12 | [Swastika Pattern](./Swastika-Pattern/README.md) | Cross + 4-arm border conditions | 🔴 Hard |
 
 ---
 
@@ -57,14 +63,6 @@ for (int i = 0; i < rows; i++) {
 }
 ```
 
-### Growing Triangle (Staircase)
-```java
-for (int i = 0; i < n; i++) {
-    for (int j = 0; j <= i; j++) System.out.print("*");
-    System.out.println();
-}
-```
-
 ### Centred Pyramid (Space + Stars)
 ```java
 for (int i = 0; i < n; i++) {
@@ -76,15 +74,30 @@ for (int i = 0; i < n; i++) {
 
 ### Diamond (Top + Bottom halves)
 ```java
-// Top half (i = 0 to n-1)
-// Bottom half (i = n-2 down to 0)
+// Top half (i = 0 to n-1), Bottom half (i = n-2 down to 0)
 // Same space/star formula, different loop direction
 ```
 
-### Symmetric Number Row
+### Iterative Fibonacci
 ```java
-for (int j = 1; j <= i + 1; j++) System.out.print(j + " "); // ascending
-for (int j = i; j >= 1; j--)    System.out.print(j + " "); // descending
+int first = 0, second = 1;
+for (int i = 2; i <= n; i++) {
+    int next = first + second;
+    first = second;
+    second = next;
+}
+```
+
+### Complex Border Condition (Swastika)
+```java
+if (i == n/2 || j == n/2)                          // cross
+    print("* ");
+else if (i < n/2 && j == 0 || j == n-1 && i > n/2) // left/right arms
+    print("* ");
+else if (j > n/2 && i == 0 || i == n-1 && j < n/2) // top/bottom arms
+    print("* ");
+else
+    print("  ");
 ```
 
 ---
@@ -93,7 +106,7 @@ for (int j = i; j >= 1; j--)    System.out.print(j + " "); // descending
 
 | Total Problems | Pattern-Based |
 |:--------------:|:-------------:|
-| **10**         | 10            |
+| **12**         | 12            |
 
 ---
 

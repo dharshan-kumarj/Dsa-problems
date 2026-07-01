@@ -11,7 +11,7 @@ dsa-problems/
 └── math-coding/               ← Mathematical & numerical problem solving
     ├── digit-based/           ← Problems using whole-number arithmetic & conditional logic
     ├── sequence-based/        ← Problems using digit-extraction techniques
-    └── pattern-based/         ← Problems printing 2D star/number patterns using nested loops
+    └── pattern-based/         ← Problems printing 2D patterns and computing sequences
 ```
 
 ---
@@ -20,13 +20,13 @@ dsa-problems/
 
 ### 🧮 [Math Coding](./math-coding/README.md)
 
-Problems focused on mathematical logic, number theory, digit manipulation, conditional reasoning, and pattern printing.
+Problems focused on mathematical logic, number theory, digit manipulation, conditional reasoning, pattern printing, and sequences.
 
 | Sub-Category | Problems | Topics Covered |
 |---|---|---|
 | [Digit-Based](./math-coding/digit-based/) | 20 | Power, Factors, Primes, Factorial, Comparison, Leap Year, Grading, Triangle, Characters, Armstrong, Harshad, Neon, Automorphic, Spy, GCD, LCM |
 | [Sequence-Based](./math-coding/sequence-based/) | 8 | Digit Sum, Digit Count, Max/Min Digit, Odd/Even Digit Sum, Palindrome, Reverse, First & Last Digit, Primes in Range |
-| [Pattern-Based](./math-coding/pattern-based/) | 10 | Square, Rectangle, Staircase, Descending Steps, Diagonal, Hollow Frame, Star Pyramid, Diamond, Number Pyramid, Symmetric Pyramid |
+| [Pattern-Based](./math-coding/pattern-based/) | 12 | Square, Rectangle, Staircase, Descending Steps, Diagonal, Hollow Frame, Star Pyramid, Diamond, Number Pyramid, Symmetric Pyramid, Fibonacci, Swastika |
 
 ---
 
@@ -81,6 +81,8 @@ Problems focused on mathematical logic, number theory, digit manipulation, condi
 | 8 | [Diamond Star Pattern](./math-coding/pattern-based/Diamond%20Star%20Pattern/README.md) | 🟡 Medium |
 | 9 | [Number Pyramid](./math-coding/pattern-based/Number%20Pyramid/README.md) | 🟡 Medium |
 | 10 | [Symmetric Number Pyramid](./math-coding/pattern-based/Symmetric%20Number%20Pyramid/README.md) | 🔴 Hard |
+| 11 | [Fibonacci Number](./math-coding/pattern-based/%20Fibonacci-Number/README.md) | 🟢 Easy |
+| 12 | [Swastika Pattern](./math-coding/pattern-based/Swastika-Pattern/README.md) | 🔴 Hard |
 
 ---
 
@@ -90,8 +92,8 @@ Problems focused on mathematical logic, number theory, digit manipulation, condi
 |---|---|---|---|
 | Math Coding — Digit-Based | 20 | 20 | 0 |
 | Math Coding — Sequence-Based | 8 | 8 | 0 |
-| Math Coding — Pattern-Based | 10 | 10 | 0 |
-| **Total** | **38** | **38** | **0** |
+| Math Coding — Pattern-Based | 12 | 12 | 0 |
+| **Total** | **40** | **40** | **0** |
 
 ---
 
@@ -108,7 +110,7 @@ Problems focused on mathematical logic, number theory, digit manipulation, condi
 
 ```bash
 # Navigate to the problem folder
-cd math-coding/pattern-based/Star Pyramid
+cd math-coding/pattern-based/Star\ Pyramid
 
 # Compile
 javac Solution.java

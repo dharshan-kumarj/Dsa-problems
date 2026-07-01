@@ -40,7 +40,7 @@ math-coding/
 │   ├── Sum-of-First-and-Last-Digit/
 │   └── Prime-Numbers-in-Range/
 │
-└── pattern-based/        ← Problems that print 2D patterns using nested loops
+└── pattern-based/        ← Problems that print 2D patterns and compute sequences
     ├── Square/
     ├── Rectangle/
     ├── Staircase of Stars/
@@ -50,7 +50,9 @@ math-coding/
     ├── Star Pyramid/
     ├── Diamond Star Pattern/
     ├── Number Pyramid/
-    └── Symmetric Number Pyramid/
+    ├── Symmetric Number Pyramid/
+    ├──  Fibonacci-Number/
+    └── Swastika-Pattern/
 ```
 
 ---
@@ -103,7 +105,7 @@ Problems that **extract individual digits** by repeatedly using `% 10` and `/ 10
 
 ## ⭐ Pattern-Based Problems
 
-Problems that print **2D star and number patterns** using nested loops.
+Problems that print **2D star/number patterns** and compute **mathematical sequences** using loops.
 
 | # | Problem | Pattern Type | Difficulty |
 |---|---------|--------------|------------|
@@ -117,6 +119,8 @@ Problems that print **2D star and number patterns** using nested loops.
 | 8 | [Diamond Star Pattern](./pattern-based/Diamond%20Star%20Pattern/README.md) | Full diamond (pyramid + inverted) | 🟡 Medium |
 | 9 | [Number Pyramid](./pattern-based/Number%20Pyramid/README.md) | Centred number pyramid (1..i per row) | 🟡 Medium |
 | 10 | [Symmetric Number Pyramid](./pattern-based/Symmetric%20Number%20Pyramid/README.md) | Palindromic number pyramid (1..i..1) | 🔴 Hard |
+| 11 | [Fibonacci Number](./pattern-based/%20Fibonacci-Number/README.md) | Iterative F(n) sequence | 🟢 Easy |
+| 12 | [Swastika Pattern](./pattern-based/Swastika-Pattern/README.md) | Cross + 4-arm border conditions | 🔴 Hard |
 
 ---
 
@@ -156,12 +160,13 @@ for (int i = 0; i < n; i++) {
 }
 ```
 
-### Border Condition (Hollow Frame)
+### Iterative Fibonacci
 ```java
-if (i == 0 || i == n - 1 || j == 0 || j == n - 1)
-    System.out.print("* ");
-else
-    System.out.print("  ");
+int first = 0, second = 1;
+for (int i = 2; i <= n; i++) {
+    int next = first + second;
+    first = second; second = next;
+}
 ```
 
 ---
@@ -170,7 +175,7 @@ else
 
 | Total Problems | Digit-Based | Sequence-Based | Pattern-Based |
 |:--------------:|:-----------:|:--------------:|:-------------:|
-| **38**         | 20          | 8              | 10            |
+| **40**         | 20          | 8              | 12            |
 
 ---
 
